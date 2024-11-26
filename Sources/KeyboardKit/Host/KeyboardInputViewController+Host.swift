@@ -19,8 +19,7 @@ public extension KeyboardInputViewController {
     /// function, and design the app to be able to work even
     /// if this feature suddenly stops working.
     var hostApplicationBundleId: String? {
-        if let id = hostBundleIdValueBefore16 { return id }
-        return hostBundleIdValueFor16
+        return Bundle.main.bundleIdentifier
     }
     
     @available(*, deprecated, renamed: "hostApplicationBundleId")
